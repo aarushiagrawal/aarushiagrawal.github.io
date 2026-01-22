@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNull - Sustainable Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">EcoNull</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#vision" class="text-gray-700 hover:text-emerald-600 transition">Vision</a>
+                    <a href="#pillars" class="text-gray-700 hover:text-emerald-600 transition">Pillars</a>
+                    <a href="#impact" class="text-gray-700 hover:text-emerald-600 transition">Impact</a>
+                    <a href="#contact" class="text-gray-700 hover:text-emerald-600 transition">Contact</a>
+                </div>
+                <div>
+                    <button class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition">
+                        Get Involved
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center opacity-0 animate-fadeInUp">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                    Building a <span class="gradient-text">Carbon-Neutral</span> Future
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    EcoNull is pioneering sustainable communities where environmental impact reaches zero and human potential reaches infinity.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-700 transition shadow-lg">
+                        Join the Movement
+                    </button>
+                    <button class="bg-white text-emerald-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition border-2 border-emerald-600">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="opacity-0 animate-fadeIn delay-200">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">100%</div>
+                    <div class="text-gray-600">Renewable Energy</div>
+                </div>
+                <div class="opacity-0 animate-fadeIn delay-400">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">Zero</div>
+                    <div class="text-gray-600">Waste Production</div>
+                </div>
+                <div class="opacity-0 animate-fadeIn delay-600">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">50K+</div>
+                    <div class="text-gray-600">Community Members</div>
+                </div>
+                <div class="opacity-0 animate-fadeIn delay-600">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">15</div>
+                    <div class="text-gray-600">Global Locations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Vision</h2>
+                <div class="w-20 h-1 bg-emerald-600 mx-auto"></div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    EcoNull represents a fundamental shift in how we conceive of human habitation. We are developing integrated ecosystems where technology, nature, and community converge to create living environments with net-zero environmental impact.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Through innovative urban design, renewable energy infrastructure, circular economy principles, and community-driven governance, we are proving that prosperity and sustainability are not just compatible—they are inseparable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="pillars" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Pillars</h2>
+                <div class="w-20 h-1 bg-emerald-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Environmental Stewardship</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Regenerative practices that restore ecosystems, protect biodiversity, and eliminate pollution at every level of our operations.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Clean Energy</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        100% renewable energy infrastructure powered by solar, wind, and advanced storage solutions ensuring energy independence.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Community Equity</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Inclusive governance structures ensuring equal access to resources, opportunities, and decision-making for all residents.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Circular Economy</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Zero-waste systems where every resource is reused, recycled, or composted, eliminating the concept of waste entirely.
+                    </p>
+                </div>
+
+                <!-- Pillar 5 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Education & Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Continuous learning environments fostering research, development, and knowledge-sharing for sustainable solutions.
+                    </p>
+                </div>
+
+                <!-- Pillar 6 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 hover:shadow-xl transition">
+                    <div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Well-Being First</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Holistic health services, green spaces, and community programs prioritizing physical and mental wellness for all.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 px-4 bg-gradient-to-br from-emerald-600 to-teal-600 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Impact</h2>
+                <p class="text-xl text-emerald-100 max-w-3xl mx-auto">
+                    Real results from communities committed to sustainable transformation
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8">
+                    <div class="text-5xl font-bold mb-2">2.5M</div>
+                    <div class="text-emerald-100 text-lg">Tons CO₂ Eliminated Annually</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8">
+                    <div class="text-5xl font-bold mb-2">95%</div>
+                    <div class="text-emerald-100 text-lg">Waste Diverted from Landfills</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8">
+                    <div class="text-5xl font-bold mb-2">180K</div>
+                    <div class="text-emerald-100 text-lg">Trees Planted & Maintained</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Ready to Build the Future?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Join thousands of visionaries creating sustainable communities worldwide.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-emerald-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-700 transition shadow-lg">
+                    Become a Member
+                </button>
+                <button class="bg-gray-100 text-gray-900 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                    Schedule a Tour
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">EcoNull</h3>
+                    <p class="text-gray-400">Building carbon-neutral communities for a sustainable future.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Research</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Support</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 EcoNull. All rights reserved. Building a sustainable tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
