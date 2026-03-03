@@ -14,8 +14,8 @@ import '../styles/global.css';
                 tagline="Mechanical Engineering student at Northeastern University with a focus on manufacturing and design."
             >
                 <img
-                    width="1553"
-                    height="873"
+                    width="500"
+                    height="500"
                     src="/assets/aarushi_2.jpg"
                     alt="Aarushi Agrawal"
                 />
@@ -78,12 +78,18 @@ import '../styles/global.css';
         gap: 3.5rem;
     }
 
-    img {
-        margin-top: 1.5rem;
-        border-radius: 0.5rem;
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--gray-800);
-    }
+img {
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-800);
+    
+    /* Add these lines */
+    width: 100%;       /* Makes it responsive */
+    max-height: 450px; /* Limits the height */
+    object-fit: cover; /* Prevents stretching */
+    object-position: center; /* Adjust this to 'center' or 'top' depending on the photo */
+}
 
     section {
         display: flex;
