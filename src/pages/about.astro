@@ -3,109 +3,203 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Skills from '../components/Skills.astro';
+import '../styles/global.css';
 ---
 
-<BaseLayout title="About | Aarushi Agrawal" description="About Aarushi Agrawal Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout title="About | Aarushi Agrawal" description="Learn more about Aarushi Agrawal's background in Mechanical Engineering">
+    <div class="stack gap-20">
+        <main class="wrapper about">
+            <Hero
+                title="About"
+                tagline="Mechanical Engineering student at Northeastern University with a focus on manufacturing and design."
+            >
+                <img
+                    width="1553"
+                    height="873"
+                    src="/assets/aarushi_2.jpg"
+                    alt="Aarushi Agrawal"
+                />
+            </Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p class="roles">
-						Hi! My name is Aarushi Agrawal and I am a second-year Mechanical Engineering Student at Northeastern University. I am passionate about hands-on problem solving and manufacturing. Growing up, I read How Things Work by David Macauley and it really sparked my curiosity towards simple machines and other systems around me. 
+            <section>
+                <h2 class="section-title">Background</h2>
+                <div class="content">
+                    <p>
+                        I am a second-year Mechanical Engineering student at Northeastern University, passionate about hands-on problem solving and manufacturing. My curiosity for engineering began with David Macauley’s <em>How Things Work</em>, which sparked a lifelong interest in dissecting and understanding complex systems.
+                    </p>
+                    <br />
+                    <p>
+                        Since then, I have transitioned from leading FIRST FTC Robotics teams in high school to collaborating on interdisciplinary projects with NURobotics. I thrive in environments where CAD design meets physical fabrication, specifically focusing on how tolerances and GD&T impact real-world performance.
+                    </p>
+                </div>
+            </section>
 
-Since then, I have continued developing my technical skills. I joined FIRST FTC Robotics in middles chool and grew to become team captain and head of build during my junior year of high schoool. I then joined NURobotics at Northeastern where I collaborate with other mechanical and electrical engineers. 
+            <section>
+                <h2 class="section-title">Education</h2>
+                <div class="content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-text left">
+                                <span class="date">2020 — 2024</span>
+                                <h3>Wilton Highschool</h3>
+                                <p>Graduated with honors and completed AP courses from Wilton Hghschool in Wilton, Ct. Ranked #69 for stem in the nation</p>
+                            </div>
+                        </div>
 
-I have experience with various CAD platforms, including Solidworks, OnShape, and Fusion 360 and love 3D printing. I am also familiar with lazer cutting and CNC milling. I am excited to apply my skills in industry and continue learning about tolerances, GD&T, and designing and improving systems. 
-					</p>
-					<Skills />
-				</div>
-				
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-text right">
+                                <span class="date">2024 — 2028</span>
+                                <h3>Northeastern</h3>
+                                <p>Studying Mechanicl Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-		<ContactCTA />
-	</div>
+            <section>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="content">
+                    <Skills />
+                </div>
+            </section>
+        </main>
+
+        <ContactCTA />
+    </div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+    img {
+        margin-top: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--gray-800);
+    }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+    }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+    .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        font-weight: 700;
+    }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+    .content {
+        grid-column: 2 / 4;
+        line-height: 1.6;
+    }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+    /* Timeline Styles - Standard CSS */
+    .timeline {
+        position: relative;
+        padding: 2rem 0;
+    }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: var(--gray-800);
+    }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+    .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        padding-left: 2.5rem;
+    }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+    .timeline-dot {
+        position: absolute;
+        left: calc(1rem - 4px);
+        top: 0.5rem;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: var(--gray-999);
+        border: 1px solid var(--accent-regular);
+        z-index: 2;
+    }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+    .timeline-text h3 {
+        font-size: var(--text-md);
+        color: var(--gray-100);
+        margin: 0.25rem 0;
+    }
+
+    .date {
+        font-family: var(--font-brand);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        color: var(--accent-regular);
+    }
+
+    .timeline-text p {
+        font-size: var(--text-sm);
+        color: var(--gray-400);
+    }
+
+    @media (min-width: 50em) {
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+            grid-column-start: 2;
+        }
+
+        section {
+            display: contents;
+            font-size: var(--text-lg);
+        }
+
+        /* Desktop Timeline Logic */
+        .timeline::before {
+            left: 50%;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .timeline-dot {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-text {
+            width: 45%;
+        }
+
+        .timeline-text.left {
+            text-align: right;
+        }
+
+        .timeline-text.right {
+            margin-left: auto;
+        }
+    }
 </style>
