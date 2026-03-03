@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import type { iconPaths } from '../components/IconPaths';
+
+const socials: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
+  { label: 'Phone', href: 'tel:203-682-5864', icon: 'phone' },
+  { label: 'Email', href: 'mailto:agrawal.aar@northeastern.edu', icon: 'envelope' },
+  { label: 'GitHub', href: 'https://github.com/aarushiagrawal', icon: 'github-logo' },
+  { label: 'Instagram', href: 'https://www.instagram.com/', icon: 'instagram-logo' },
+];
+---
+
+<BaseLayout title="Contact | Aarushi Agrawal" description="Contact Aarushi Agrawal">
+	<div class="wrapper stack gap-20">
+		<main class="contact-grid">
+			<section class="stack gap-8">
+				<div class="stack gap-4">
+					<h1>Contact</h1>
+					<p class="description">
+						Feel free to reach out to me via phone, email, or through my social media profiles. I'm always open to connecting with new people and discussing potential opportunities.
+					</p>
+				</div>
+
+				<div class="stack gap-4">
+					{socials.map(({ label, href, icon }) => (
+						<a href={href} class="contact-link">
+							<Icon icon={icon} size="1.2rem" gradient />
+							<div class="stack">
+								<span class="label">{label}</span>
+								<span class="value">{href.replace('mailto:', '').replace('tel:', '')}</span>
+							</div>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<section class="box stack gap-8">
+				<form id="contact-form" class="stack gap-4">
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+					<div class="field">
+						<label for="subject">Subject</label>
+						<input type="text" id="subject" name="subject" required />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" required></textarea>
+					</div>
+					<button type="submit" id="submit-btn" class="submit-btn">
+						Send Message
+					</button>
+				</form>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
+
+<script is:inline>
+  const contactForm = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const webhookUrl = 'https://discord.com/api/webhooks/1478436387421163520/FX4s9fccKArb-VEBwJJ2fbsFZsQQByuDRRDxi9qeDQPp2vRNBsIUvCKrb88FjYLyZOwp';
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+
+    const originalText = submitBtn.innerText;
+    submitBtn.innerText = "Processing...";
+    submitBtn.style.opacity = "0.7";
+    submitBtn.disabled = true;
+
+    const discordPayload = {
+      embeds: [{
+        title: data.subject,
+        color: 0x1a8a42,
+        fields: [
+          { name: "Sender", value: data.name, inline: true },
+          { name: "Email", value: data.email, inline: true },
+          { name: "Message", value: data.message }
+        ],
+        timestamp: new Date().toISOString()
+      }]
+    };
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(discordPayload)
+      });
+
+      if (response.ok) {
+        alert("Message sent.");
+        contactForm.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (err) {
+      alert("Submission failed. Please use the email link provided.");
+    } finally {
+      submitBtn.innerText = originalText;
+      submitBtn.style.opacity = "1";
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+<style>
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		margin-top: 5rem;
+	}
+
+	.description {
+		font-size: var(--text-md);
+		color: var(--gray-400);
+        line-height: 1.6;
+	}
+
+	.contact-link {
+		display: flex;
+		align-items: center;
+		gap: 1.2rem;
+		padding: 0.8rem 1.2rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 0.5rem;
+		text-decoration: none;
+		color: var(--gray-200);
+		transition: border-color 0.2s ease;
+	}
+
+	.contact-link:hover {
+		border-color: var(--accent-regular);
+	}
+
+	.contact-link .label {
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		color: var(--gray-500);
+	}
+
+	.box {
+		border: 1px solid var(--gray-800);
+		padding: 2rem;
+		background-color: var(--gray-999_40);
+	}
+
+	.field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	label {
+		font-size: var(--text-sm);
+		color: var(--gray-200);
+	}
+
+	input, textarea {
+		padding: 0.75rem;
+		border: 1px solid var(--gray-700);
+		background: var(--gray-999);
+		color: var(--gray-100);
+        border-radius: 0.25rem;
+	}
+
+	input:focus, textarea:focus {
+		outline: 1px solid var(--accent-regular);
+		border-color: transparent;
+	}
+
+	.submit-btn {
+		padding: 0.8rem;
+		background: var(--gradient-accent);
+		color: white;
+		border: none;
+		font-weight: 600;
+		cursor: pointer;
+        border-radius: 0.25rem;
+	}
+
+	@media (min-width: 50em) {
+		.contact-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+</style>

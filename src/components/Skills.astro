@@ -1,62 +1,140 @@
 ---
-import Icon from './Icon.astro';
+/* Skills section - All skills restored, images removed */
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
-	</div>
+    <div class="stack gap-2 lg:gap-4 card">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#green-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+                <defs>
+                    <linearGradient id="green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="var(--accent-light)" />
+                        <stop offset="100%" stop-color="var(--accent-regular)" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <h2>Software</h2>
+        <p>Expertise in computational analysis, embedded systems, and general purpose programming.</p>
+        <div class="tag-group">
+            <span class="tag">MS Excel</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Altium Designer</span>
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+        </div>
+    </div>
+
+    <div class="stack gap-2 lg:gap-4 card">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#green-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+        </div>
+        <h2>CAD</h2>
+        <p>Advanced 3D modeling, parametric design, and drafting for mechanical engineering.</p>
+        <div class="tag-group">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">Onshape</span>
+            <span class="tag">Fusion 360</span>
+            <span class="tag">AutoCAD</span>
+        </div>
+    </div>
+
+    <div class="stack gap-2 lg:gap-4 card">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#green-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+        </div>
+        <h2>Machining</h2>
+        <p>Comprehensive hands-on experience in rapid prototyping and traditional shop tools.</p>
+        <div class="tag-group">
+            <span class="tag">3D Printing</span>
+            <span class="tag">Laser Cutting</span>
+            <span class="tag">CNC Milling</span>
+            <span class="tag">Drill Press</span>
+            <span class="tag">Band Saw</span>
+            <span class="tag">Lathe</span>
+            <span class="tag">Waterjet Cutting</span>
+            <span class="tag">Soldering</span>
+        </div>
+    </div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+    .box {
+        border: 1px solid var(--gray-800);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background-color: var(--gray-999_40);
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(10px);
+    }
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+    .icon-container {
+        margin-bottom: 0.5rem;
+    }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+    .skills h2 {
+        font-size: var(--text-lg);
+        color: var(--gray-100);
+    }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+    .skills p {
+        color: var(--gray-400);
+        font-size: var(--text-sm);
+        margin-bottom: 1rem;
+    }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+    .tag-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: auto;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: 0.25rem 0.6rem;
+        background: var(--gray-800);
+        color: var(--gray-200);
+        border-radius: 0.375rem;
+        border: 1px solid var(--gray-700);
+    }
+
+    @media (min-width: 50em) {
+        .box {
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+        }
+
+        .skills h2 {
+            font-size: var(--text-2xl);
+        }
+    }
 </style>
